@@ -134,15 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    ctaButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            e.preventDefault();
-            const sectionId = button.getAttribute('href');
-            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
