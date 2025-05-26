@@ -7,14 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectsGrid = document.querySelector('.projects-grid');
 
     function showSection(sectionId) {
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
         document.querySelector(sectionId).classList.add('active');
 
 
         navLinks.forEach(link => {
-            link.classList.remove('active');
             if (link.getAttribute('href') === sectionId) {
                 link.classList.add('active');
             }
@@ -145,11 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const sectionId = link.getAttribute('href');
             showSection(sectionId);
-            
-
-            if (navLinksContainer.classList.contains('active')) {
-                navLinksContainer.classList.remove('active');
-            }
         });
     });
 
