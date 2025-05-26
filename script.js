@@ -6,16 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButtons = document.querySelectorAll('.cta-buttons a');
     const projectsGrid = document.querySelector('.projects-grid');
 
-    function showSection(sectionId) {
-        document.querySelector(sectionId).classList.add('active');
-
-
-        navLinks.forEach(link => {
-            if (link.getAttribute('href') === sectionId) {
-                link.classList.add('active');
-            }
-        });
-    }
 
     async function loadSectionData(sectionPath) {
         try {
@@ -30,29 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadHomeContent() {
         const homeData = await loadSectionData('assets/home');
         if (homeData) {
-            const homeSection = document.querySelector('#home .container');
-            let mediaHTML = '';
+            const homeMedia = document.getElementById('home-media');
             if (homeData.media && homeData.media.type === 'video') {
-                mediaHTML = `<div class="home-media"><video src="${homeData.media.path}" autoplay muted loop playsinline style="width:100%;max-width:600px;border-radius:1rem;"></video></div>`;
+                homeMedia.innerHTML = `<div class="home-media"><video src="${homeData.media.path}" autoplay muted loop playsinline></video></div>`;
             } else if (homeData.media && homeData.media.type === 'image') {
-                mediaHTML = `<div class="home-media"><img src="${homeData.media.path}" alt="Home media" style="width:100%;max-width:600px;border-radius:1rem;"></div>`;
+                homeMedia.innerHTML = `<div class="home-media"><img src="${homeData.media.path}" alt="Home media"></div>`;
             }
-            homeSection.innerHTML = `
-                <div style="display: flex; gap: 10rem;">
-                    <div style="flex: 1;">${mediaHTML}</div>
-                    <div style="flex: 1.5; padding-top: 8%;">
-                        <br/><br/>
-                        <h1>${homeData.videosubtitle}</h1>
-                        <br/>
-                        <h2 class="title">${homeData.title}</h2>
-                        <p class="subtitle">${homeData.subtitle}</p>
-                        <div class="cta-buttons">
-                            ${homeData.cta.primary.show ? `<a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>` : ''}
-                            ${homeData.cta.secondary.show ? `<a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>` : ''}
-                        </div>
-                    </div>
-                </div>
-            `;
+
+            document.getElementById('home-videosubtitle').textContent = homeData.videosubtitle;
+            document.getElementById('home-title').textContent = homeData.title;
+            document.getElementById('home-subtitle').textContent = homeData.subtitle;
+
+            const ctaContainer = document.getElementById('home-cta');
+            if (homeData.cta.primary.show) {
+                ctaContainer.innerHTML += `<a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>`;
+            }
+            if (homeData.cta.secondary.show) {
+                ctaContainer.innerHTML += `<a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>`;
+            }
         }
     }
 
@@ -136,6 +121,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function showSection(sectionId) {
+        document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -167,8 +156,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    showSection('#home');
-
     loadHomeContent();
     loadAboutContent();
     loadProjects();
@@ -195,4 +182,17 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.project-card, .skill-tags span').forEach(element => {
         element.classList.add('animate-on-scroll');
     });
+
+    const style = document.createElement('style');
+    style.textContent = `
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    `;
+    document.head.appendChild(style);
 }); 
