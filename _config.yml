@@ -14,3 +14,21 @@ plugins:
   - jekyll-seo-tag
 
 # personalizza i colori o altre variabili (dipende dal tema scelto)
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      nav_order: 0
+
+nav_external_links:
+  - title: Home
+    url: /
+    order: 1
+  - title: About
+    url: /about/
+    order: 2
+  - title: Projects
+    url: /projects/
+    order: 3

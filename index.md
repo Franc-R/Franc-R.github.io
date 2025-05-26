@@ -2,7 +2,6 @@
 layout: default
 title: Home
 permalink: /
-nav_order: 1
 ---
 
 # Welcome to Francesco Russo's Website
