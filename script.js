@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('.section');
-    const hamburger = document.querySelector('.hamburger');
     const navLinksContainer = document.querySelector('.nav-links');
     const ctaButtons = document.querySelectorAll('.cta-buttons a');
 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (navLinksContainer.classList.contains('active')) {
                 navLinksContainer.classList.remove('active');
-                hamburger.classList.remove('active');
             }
         });
     });
@@ -43,12 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionId = button.getAttribute('href');
             showSection(sectionId);
         });
-    });
-
-
-    hamburger.addEventListener('click', () => {
-        navLinksContainer.classList.toggle('active');
-        hamburger.classList.toggle('active');
     });
 
 
