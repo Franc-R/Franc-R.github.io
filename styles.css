@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
+    --primary-color: #b90000;
+    --secondary-color: #a00000;
     --text-color: #1f2937;
     --light-text: #6b7280;
     --background: #ffffff;
@@ -70,7 +70,6 @@ body {
 }
 
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
