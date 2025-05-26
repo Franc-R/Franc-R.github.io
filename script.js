@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
                     <a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>
                 </div>
-                <p class="video-subtitle">${homeData.videosubtitle}</p>
+                <br/><br/>
+                <h2>${homeData.videosubtitle}</h2>
                 ${mediaHTML}
             `;
         }
