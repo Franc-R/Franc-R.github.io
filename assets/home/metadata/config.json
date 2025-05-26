@@ -1,0 +1,22 @@
+{
+    "title": "Welcome to My Portfolio",
+    "subtitle": "Engineering Student | Drone Enthusiast | BCI Researcher",
+    "background": {
+        "type": "gradient",
+        "colors": ["#fef2f2", "#fee2e2"]
+    },
+    "cta": {
+        "primary": {
+            "text": "View Projects",
+            "link": "#projects"
+        },
+        "secondary": {
+            "text": "Learn More",
+            "link": "#about"
+        }
+    },
+    "media": {
+        "type": "video",
+        "path": "assets/home/media/stepping-stone-to-success.mp4"
+    }
+} 

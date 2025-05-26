@@ -5,7 +5,7 @@
     "color": "#991b1b",
     "media": {
         "type": "image",
-        "path": "media/trust-control-preview.jpg"
+        "path": "assets/projects/trust-control/media/trust-control-preview.jpg"
     },
     "details": {
         "challenge": "Balancing system autonomy with user trust and safety",
