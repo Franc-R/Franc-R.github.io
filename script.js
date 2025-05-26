@@ -42,12 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 mediaHTML = `<div class="home-media"><img src="${homeData.media.path}" alt="Home media" style="width:100%;max-width:600px;border-radius:1rem;"></div>`;
             }
             homeSection.innerHTML = `
-                <div style="display: flex; align-items: center; gap: 4rem;">
+                <div style="display: flex; align-items: center; gap: 10rem;">
                     <div style="flex: 1;">${mediaHTML}</div>
                     <div style="flex: 1;">
                         <h1>${homeData.videosubtitle}</h1>
                         <br/>
-                        <h1 style"width: 80%;">${homeData.title}</h1>
+                        <h1 style="width: 80%;">${homeData.title}</h1>
                         <p class="subtitle">${homeData.subtitle}</p>
                         <div class="cta-buttons">
                             <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
