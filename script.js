@@ -42,16 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 mediaHTML = `<div class="home-media"><img src="${homeData.media.path}" alt="Home media" style="width:100%;max-width:600px;border-radius:1rem;"></div>`;
             }
             homeSection.innerHTML = `
-                <h1>${homeData.title}</h1>
-                <p class="subtitle">${homeData.subtitle}</p>
-                <div class="cta-buttons">
-                    <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
-                    <a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>
+                <div style="display: flex; align-items: center; gap: 2rem;">
+                    <div style="flex: 1;">${mediaHTML}</div>
+                    <div style="flex: 1;">
+                        <h1>${homeData.title}</h1>
+                        <p class="subtitle">${homeData.subtitle}</p>
+                        <div class="cta-buttons">
+                            <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
+                            <a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>
+                        </div>
+                        <br/>
+                        <h2>${homeData.videosubtitle}</h2>
+                    </div>
                 </div>
-                <br/>
-                <h2>${homeData.videosubtitle}</h2>
-                <br/>
-                ${mediaHTML}
             `;
         }
     }
