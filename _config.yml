@@ -1,0 +1,16 @@
+title: Il mio sito personale
+description: "Benvenuto sul mio portfolio realizzato con Jekyll e Markdown"
+# usa un tema ufficiale GitHub Pages
+theme: minima
+
+# opzioni di Markdown (kramdown è il preprocessore usato da GitHub Pages)
+markdown: kramdown
+# permalink semplificato
+permalink: /:title/
+
+# aggiungi eventuali plugin (jekyll-feed per RSS, jekyll-seo-tag, ecc.)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# personalizza i colori o altre variabili (dipende dal tema scelto)
