@@ -21,6 +21,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    async function loadSectionData(sectionPath) {
+        try {
+            const response = await fetch(`${sectionPath}/metadata/config.json`);
+            return await response.json();
+        } catch (error) {
+            console.error('Error loading section data:', error);
+            return null;
+        }
+    }
+
+    async function loadHomeContent() {
+        const homeData = await loadSectionData('assets/home');
+        if (homeData) {
+            const homeSection = document.querySelector('#home .container');
+            homeSection.innerHTML = `
+                <h1>${homeData.title}</h1>
+                <p class="subtitle">${homeData.subtitle}</p>
+                <div class="cta-buttons">
+                    <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
+                    <a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>
+                </div>
+            `;
+        }
+    }
+
+    async function loadAboutContent() {
+        const aboutData = await loadSectionData('assets/about-me');
+        if (aboutData) {
+            const aboutSection = document.querySelector('#about .container');
+            aboutSection.innerHTML = `
+                <h2>${aboutData.title}</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>${aboutData.description}</p>
+                        <div class="skills">
+                            ${aboutData.skills.categories.map(category => `
+                                <div class="skill-category">
+                                    <h3>${category.name}</h3>
+                                    <div class="skill-tags">
+                                        ${category.items.map(skill => `<span>${skill}</span>`).join('')}
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
     async function loadProjectData(projectPath) {
         try {
             const response = await fetch(`${projectPath}/metadata/config.json`);
@@ -68,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const projectFolders = ['drone-bci', 'trust-control'];
         
         for (const folder of projectFolders) {
-            const projectData = await loadProjectData(`projects/${folder}`);
+            const projectData = await loadProjectData(`assets/projects/${folder}`);
             if (projectData) {
                 const card = createProjectCard(projectData);
                 projectsGrid.appendChild(card);
@@ -114,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showSection('#home');
 
+    loadHomeContent();
+    loadAboutContent();
     loadProjects();
 
 

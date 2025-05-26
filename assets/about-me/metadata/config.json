@@ -1,0 +1,47 @@
+{
+    "title": "About Me",
+    "description": "I'm passionate about robotics, control systems, and human-machine interaction. As an engineering student, I focus on developing innovative solutions in the fields of drones, Brain-Computer Interfaces (BCI), and autonomous systems.",
+    "skills": {
+        "categories": [
+            {
+                "name": "Technical Skills",
+                "items": [
+                    "Robotics",
+                    "Control Systems",
+                    "BCI",
+                    "Autonomous Systems",
+                    "Drone Development"
+                ]
+            },
+            {
+                "name": "Programming",
+                "items": [
+                    "Python",
+                    "C++",
+                    "MATLAB",
+                    "ROS",
+                    "TensorFlow"
+                ]
+            },
+            {
+                "name": "Tools & Technologies",
+                "items": [
+                    "OpenBCI",
+                    "Simulink",
+                    "Git",
+                    "Linux",
+                    "Docker"
+                ]
+            }
+        ]
+    },
+    "media": {
+        "type": "image",
+        "path": "assets/about-me/media/about-me.jpg"
+    },
+    "social": {
+        "github": "https://github.com/yourusername",
+        "linkedin": "https://linkedin.com/in/yourusername",
+        "twitter": "https://twitter.com/yourusername"
+    }
+} 
