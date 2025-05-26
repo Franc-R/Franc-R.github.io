@@ -41,6 +41,10 @@ body {
     color: var(--primary-color);
 }
 
+.nav-links {
+    margin: auto;
+}
+
 .nav-links a {
     color: var(--text-color);
     text-decoration: none;
@@ -52,20 +56,6 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary-color);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 2px;
-    background: var(--text-color);
-    transition: 0.3s;
 }
 
 

@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
     const hamburger = document.querySelector('.hamburger');
     const navLinksContainer = document.querySelector('.nav-links');
+    const ctaButtons = document.querySelectorAll('.cta-buttons a');
 
     function showSection(sectionId) {
         sections.forEach(section => {
@@ -32,6 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinksContainer.classList.remove('active');
                 hamburger.classList.remove('active');
             }
+        });
+    });
+
+
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const sectionId = button.getAttribute('href');
+            showSection(sectionId);
         });
     });
 
