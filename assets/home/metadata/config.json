@@ -16,7 +16,7 @@
         }
     },
     "media": {
-        "type": "image",
-        "path": "assets/home/media/profile.jpg"
+        "type": "video",
+        "path": "assets/home/media/stepping-stone-to-success.mp4"
     }
 } 

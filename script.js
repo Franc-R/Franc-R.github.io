@@ -35,7 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const homeData = await loadSectionData('assets/home');
         if (homeData) {
             const homeSection = document.querySelector('#home .container');
+            let mediaHTML = '';
+            if (homeData.media && homeData.media.type === 'video') {
+                mediaHTML = `<div class="home-media"><video src="${homeData.media.path}" autoplay muted loop playsinline style="width:100%;max-width:600px;border-radius:1rem;"></video></div>`;
+            } else if (homeData.media && homeData.media.type === 'image') {
+                mediaHTML = `<div class="home-media"><img src="${homeData.media.path}" alt="Home media" style="width:100%;max-width:600px;border-radius:1rem;"></div>`;
+            }
             homeSection.innerHTML = `
+                ${mediaHTML}
                 <h1>${homeData.title}</h1>
                 <p class="subtitle">${homeData.subtitle}</p>
                 <div class="cta-buttons">
