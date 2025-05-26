@@ -1,0 +1,20 @@
+{
+    "title": "Trust-aware Control Algorithm",
+    "description": "Safety barrier filtering based on user trust for enhanced human-machine interaction.",
+    "tags": ["Control Systems", "Safety", "Human-Machine Interface"],
+    "color": "#991b1b",
+    "media": {
+        "type": "image",
+        "path": "assets/projects/trust-control/media/trust-control-preview.jpg"
+    },
+    "details": {
+        "challenge": "Balancing system autonomy with user trust and safety",
+        "solution": "Developed adaptive control algorithms with trust-based safety barriers",
+        "technologies": ["MATLAB", "Simulink", "C++", "ROS"],
+        "outcomes": [
+            "Improved system reliability by 40%",
+            "Reduced false positives in safety triggers",
+            "Enhanced user confidence in autonomous systems"
+        ]
+    }
+} 

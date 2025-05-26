@@ -1,0 +1,20 @@
+{
+    "title": "Drone with BCI Control",
+    "description": "Real-time neural interface for UAVs, enabling direct brain-to-drone control systems.",
+    "tags": ["BCI", "Drones", "Neural Interface"],
+    "color": "#dc2626",
+    "media": {
+        "type": "image",
+        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
+    },
+    "details": {
+        "challenge": "Developing a reliable brain-computer interface for drone control",
+        "solution": "Implemented real-time neural signal processing and adaptive control algorithms",
+        "technologies": ["Python", "ROS", "TensorFlow", "OpenBCI"],
+        "outcomes": [
+            "Achieved 85% accuracy in command recognition",
+            "Reduced latency to under 100ms",
+            "Published research paper in IEEE Robotics"
+        ]
+    }
+} 
