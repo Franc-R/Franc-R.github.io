@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             homeSection.innerHTML = `
                 <div style="display: flex; align-items: center; gap: 10rem;">
-                    <div style="flex: 1;">${mediaHTML}</div>
-                    <div style="flex: 1;">
+                    <div style="flex: 1; width: 40%;">${mediaHTML}</div>
+                    <div style="flex: 1; width: 40%;">
                         <h1>${homeData.videosubtitle}</h1>
                         <br/>
-                        <h1 style="width: 80%;">${homeData.title}</h1>
+                        <h1 style="font-size: 80%;">${homeData.title}</h1>
                         <p class="subtitle">${homeData.subtitle}</p>
                         <div class="cta-buttons">
                             <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
