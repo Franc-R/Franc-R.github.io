@@ -10,6 +10,7 @@
     --secondary-color: #a00000;
     --text-color: #1f2937;
     --light-text: #6b7280;
+    --lighter-text: #464b53;
     --background: #ffffff;
     --section-bg: #f3f4f6;
 }
@@ -90,6 +91,12 @@ body {
 .subtitle {
     font-size: 1.25rem;
     color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    color: var(--lighter-text);
     margin-bottom: 2rem;
 }
 
