@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             const sectionId = button.getAttribute('href');
-            showSection(sectionId);
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
         });
     });
 
