@@ -39,9 +39,9 @@ body {
 
 .nav-brand {
     padding-left: 12%;
-    padding-right: 14.5%;
+    padding-right: 13%;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary-color);
 }
 
