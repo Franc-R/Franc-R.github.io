@@ -8,12 +8,14 @@
     },
     "cta": {
         "primary": {
-            "text": "View Projects",
-            "link": "#projects"
+            "text": "View my projects -->",
+            "link": "#projects",
+            "show": true
         },
         "secondary": {
             "text": "Learn More",
-            "link": "#about"
+            "link": "#about",
+            "show": false
         }
     },
     "media": {

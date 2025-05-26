@@ -44,15 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
             homeSection.innerHTML = `
                 <div style="display: flex; gap: 10rem;">
                     <div style="flex: 1;">${mediaHTML}</div>
-                    <div style="flex: 1;">
+                    <div style="flex: 1.5; padding-top: 8%;">
                         <br/><br/>
                         <h1>${homeData.videosubtitle}</h1>
                         <br/>
                         <h2 class="title">${homeData.title}</h2>
                         <p class="subtitle">${homeData.subtitle}</p>
                         <div class="cta-buttons">
-                            <a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>
-                            <a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>
+                            ${homeData.cta.primary.show ? `<a href="${homeData.cta.primary.link}" class="btn primary">${homeData.cta.primary.text}</a>` : ''}
+                            ${homeData.cta.secondary.show ? `<a href="${homeData.cta.secondary.link}" class="btn secondary">${homeData.cta.secondary.text}</a>` : ''}
                         </div>
                     </div>
                 </div>
