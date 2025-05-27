@@ -26,12 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
             homeContainer.innerHTML = '';
 
             if (isMobile) {
-                console.log('Mobile');
                 homeContainer.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 2rem;">
-                        <div id="home-media" style="width: 100%;"></div>
                         <div style="text-align: center; padding: 1rem;">
                             <h1 class="fade-in" id="home-videosubtitle"></h1>
+                        </div>
+                        <div id="home-media" style="width: 100%;"></div>
+                        <div style="text-align: center; padding: 1rem;">
                             <h2 class="title fade-in" id="home-title"></h2>
                             <p class="subtitle fade-in" id="home-subtitle"></p>
                             <div class="cta-buttons fade-in" id="home-cta"></div>
