@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButtons = document.querySelectorAll('.cta-buttons a');
     const projectsGrid = document.querySelector('.projects-grid');
 
-    // Device detection
     const isMobile = window.innerWidth <= 768;
     const homeContainer = document.querySelector('#home .container');
 
@@ -23,11 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadHomeContent() {
         const homeData = await loadSectionData('assets/home');
         if (homeData) {
-            // Clear existing content
+
             homeContainer.innerHTML = '';
 
             if (isMobile) {
-                // Mobile layout
+                console.log('Mobile');
                 homeContainer.innerHTML = `
                     <div style="display: flex; flex-direction: column; gap: 2rem;">
                         <div id="home-media" style="width: 100%;"></div>
@@ -40,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             } else {
-                // Desktop layout
                 homeContainer.innerHTML = `
                     <div style="display: flex; gap: 10rem; margin-top: -8%;">
                         <div style="flex: 1;" id="home-media"></div>
