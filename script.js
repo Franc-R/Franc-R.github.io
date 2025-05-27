@@ -125,11 +125,20 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
     }
 
+    function updateActiveNavLink(sectionId) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const activeLink = document.querySelector(`.nav-links a[href="${sectionId}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const sectionId = link.getAttribute('href');
             showSection(sectionId);
+            updateActiveNavLink(sectionId);
         });
     });
 
@@ -156,13 +165,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const observerOptions = {
-        threshold: 0.1
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+        rootMargin: '-20% 0px -20% 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
+                const sectionId = '#' + entry.target.id;
+                updateActiveNavLink(sectionId);
             }
         });
     }, observerOptions);
