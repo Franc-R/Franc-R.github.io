@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctaButtons = document.querySelectorAll('.cta-buttons a');
     const projectsGrid = document.querySelector('.projects-grid');
 
+    // Device detection
+    const isMobile = window.innerWidth <= 768;
+    const homeContainer = document.querySelector('#home .container');
 
     async function loadSectionData(sectionPath) {
         try {
@@ -20,6 +23,39 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadHomeContent() {
         const homeData = await loadSectionData('assets/home');
         if (homeData) {
+            // Clear existing content
+            homeContainer.innerHTML = '';
+
+            if (isMobile) {
+                // Mobile layout
+                homeContainer.innerHTML = `
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div id="home-media" style="width: 100%;"></div>
+                        <div style="text-align: center; padding: 1rem;">
+                            <h1 class="fade-in" id="home-videosubtitle"></h1>
+                            <h2 class="title fade-in" id="home-title"></h2>
+                            <p class="subtitle fade-in" id="home-subtitle"></p>
+                            <div class="cta-buttons fade-in" id="home-cta"></div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                // Desktop layout
+                homeContainer.innerHTML = `
+                    <div style="display: flex; gap: 10rem; margin-top: -8%;">
+                        <div style="flex: 1;" id="home-media"></div>
+                        <div style="flex: 1.5; padding-top: 8%;">
+                            <br/><br/>
+                            <h1 class="fade-in" id="home-videosubtitle"></h1>
+                            <br/>
+                            <h2 class="title fade-in" id="home-title"></h2>
+                            <p class="subtitle fade-in" id="home-subtitle"></p>
+                            <div class="cta-buttons fade-in" id="home-cta"></div>
+                        </div>
+                    </div>
+                `;
+            }
+
             const homeMedia = document.getElementById('home-media');
             if (homeData.media && homeData.media.type === 'video') {
                 homeMedia.innerHTML = `<div class="home-media"><video src="${homeData.media.path}" autoplay muted loop playsinline></video></div>`;
@@ -158,6 +194,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            const newIsMobile = window.innerWidth <= 768;
+            if (newIsMobile !== isMobile) {
+                loadHomeContent();
+            }
+        }, 250);
+    });
 
     loadHomeContent();
     loadAboutContent();
