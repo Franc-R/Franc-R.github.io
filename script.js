@@ -22,34 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadHomeContent() {
         const homeData = await loadSectionData('assets/home');
         if (homeData) {
-
             homeContainer.innerHTML = '';
 
             if (isMobile) {
                 homeContainer.innerHTML = `
-                    <div style="display: flex; flex-direction: column; gap: 2rem;">
-                        <div style="text-align: center; padding: 1rem;">
-                            <h1 class="fade-in" id="home-videosubtitle"></h1>
+                    <div class="home-content-mobile">
+                        <div class="home-text-mobile">
+                            <h1 class="home-videosubtitle fade-in" id="home-videosubtitle"></h1>
                         </div>
-                        <div id="home-media" style="width: 100%;"></div>
-                        <div style="text-align: center; padding: 1rem;">
-                            <h2 class="title fade-in" id="home-title"></h2>
-                            <p class="subtitle fade-in" id="home-subtitle"></p>
-                            <div class="cta-buttons fade-in" id="home-cta"></div>
+                        <div class="home-media-container" id="home-media"></div>
+                        <div class="home-text-mobile">
+                            <h2 class="home-title title fade-in" id="home-title"></h2>
+                            <p class="home-subtitle subtitle fade-in" id="home-subtitle"></p>
+                            <div class="home-cta cta-buttons fade-in" id="home-cta"></div>
                         </div>
                     </div>
                 `;
             } else {
                 homeContainer.innerHTML = `
-                    <div style="display: flex; gap: 10rem; margin-top: -8%;">
-                        <div style="flex: 1;" id="home-media"></div>
-                        <div style="flex: 1.5; padding-top: 8%;">
-                            <br/><br/>
-                            <h1 class="fade-in" id="home-videosubtitle"></h1>
-                            <br/>
-                            <h2 class="title fade-in" id="home-title"></h2>
-                            <p class="subtitle fade-in" id="home-subtitle"></p>
-                            <div class="cta-buttons fade-in" id="home-cta"></div>
+                    <div class="home-content-desktop">
+                        <div class="home-media-container" id="home-media"></div>
+                        <div class="home-text-desktop">
+                            <h1 class="home-videosubtitle fade-in" id="home-videosubtitle"></h1>
+                            <h2 class="home-title title fade-in" id="home-title"></h2>
+                            <p class="home-subtitle subtitle fade-in" id="home-subtitle"></p>
+                            <div class="home-cta cta-buttons fade-in" id="home-cta"></div>
                         </div>
                     </div>
                 `;
@@ -215,8 +212,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const observerOptions = {
-        threshold: 0.2,
-        rootMargin: '-50px 0px'
+        threshold: [0.1, 0.2, 0.3, 0.4, 0.5],
+        rootMargin: isMobile ? '-100px 0px' : '-50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -228,7 +225,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 section.classList.add('visible');
                 updateActiveNavLink(sectionId);
             } else if (section.id !== 'home') {
-                section.classList.remove('visible');
+                if (entry.intersectionRatio < 0.1) {
+                    section.classList.remove('visible');
+                }
             }
         });
     }, observerOptions);
