@@ -60,12 +60,30 @@ body {
     text-decoration: none;
     margin: 1rem;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary-color);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 .mobile-menu-btn {
@@ -77,6 +95,7 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     transition: color 0.3s ease;
+    z-index: 1001;
 }
 
 .mobile-menu-btn:hover {
@@ -110,6 +129,7 @@ body {
         padding: 2rem;
         transition: right 0.3s ease;
         box-shadow: -2px 0 4px rgba(0,0,0,0.1);
+        z-index: 1000;
     }
 
     .nav-links.active {
@@ -121,6 +141,14 @@ body {
         font-size: 1.2rem;
         width: 100%;
         text-align: center;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .nav-links::before {
@@ -141,6 +169,10 @@ body {
         opacity: 1;
         visibility: visible;
     }
+
+    .nav-links a:nth-child(1) { transition-delay: 0.1s; }
+    .nav-links a:nth-child(2) { transition-delay: 0.2s; }
+    .nav-links a:nth-child(3) { transition-delay: 0.3s; }
 }
 
 .section {
