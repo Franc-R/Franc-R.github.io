@@ -95,6 +95,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             `).join('')}
                         </div>
+                        <div class="cv-download">
+                            <a href="assets/about-me/media/cv-2025.pdf" class="btn primary" download>
+                                <i class="fas fa-download"></i> Download CV
+                            </a>
+                        </div>
                     </div>
                 </div>
             `;
