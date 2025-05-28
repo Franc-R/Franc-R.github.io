@@ -127,7 +127,6 @@ body {
 
 .home-text-mobile {
     text-align: center;
-    padding: 1rem;
 }
 
 .home-text-desktop {
@@ -165,7 +164,6 @@ body {
     }
 
     .home-content-mobile {
-        padding: 1rem;
     }
 
     .home-media-container {
@@ -382,7 +380,7 @@ footer {
     }
 
     #home h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .projects-grid {
