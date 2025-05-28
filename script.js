@@ -193,7 +193,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle window resize
     let resizeTimeout;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimeout);
@@ -211,25 +210,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const observerOptions = {
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-        rootMargin: '-20% 0px -20% 0px'
+        threshold: 0.2,
+        rootMargin: '-50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
+                entry.target.classList.add('visible');
                 const sectionId = '#' + entry.target.id;
                 updateActiveNavLink(sectionId);
             }
         });
     }, observerOptions);
 
-
     sections.forEach(section => {
         observer.observe(section);
     });
 
+    document.querySelector('#home').classList.add('visible');
 
     document.querySelectorAll('.project-card, .skill-tags span').forEach(element => {
         element.classList.add('animate-on-scroll');
