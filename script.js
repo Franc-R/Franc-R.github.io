@@ -254,4 +254,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    const navbar = document.querySelector('.navbar');
+    const mobileMenuBtn = document.createElement('button');
+    mobileMenuBtn.className = 'mobile-menu-btn';
+    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    navbar.appendChild(mobileMenuBtn);
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navLinksContainer.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target)) {
+            navLinksContainer.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinksContainer.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+        });
+    });
 }); 
