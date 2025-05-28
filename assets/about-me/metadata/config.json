@@ -1,36 +1,60 @@
 {
     "title": "About Me",
-    "description": "My name is Francesco Russo, and I am an electronic engineer graduated from the University of Catania. Currently, I am a graduate student in Control Engineering at La Sapienza University in Rome. I have a strong passion for dynamic systems, with a particular focus on robotics and drones. Recently, I have been working on an exciting project involving the development of a drone controlled through brain waves, combining my interests in neural interfaces and autonomous flight. I am motivated by the challenge of integrating cutting-edge technology with innovative control systems to push the boundaries of what drones can achieve.",
+    "description": "I am Francesco Russo, an Electronic Engineer with a Bachelor's degree from the University of Catania and currently pursuing a Master's degree in Control Engineering at La Sapienza University in Rome. My academic journey has been focused on control systems, robotics, and neural interfaces, with a particular emphasis on safety-critical systems and human-robot interaction. My research interests include brain-computer interfaces, UAV control, and safety management in autonomous systems. I combine theoretical knowledge with practical implementation skills, demonstrated through various projects including a BCI-controlled quadrotor and a self-balancing robot.",
     "skills": {
         "categories": [
             {
-                "name": "Technical Skills",
+                "name": "Control Theory & Systems",
                 "items": [
-                    "Robotics",
-                    "Control Systems",
-                    "BCI",
-                    "Autonomous Systems",
-                    "Drone Development"
+                    "Linear & Nonlinear Systems",
+                    "Optimal Control",
+                    "State Estimation",
+                    "Digital Control Systems",
+                    "Geometric Control of UAVs",
+                    "Control Barrier Functions",
+                    "Force Control"
                 ]
             },
             {
-                "name": "Programming",
+                "name": "Programming & Software",
                 "items": [
+                    "MATLAB/Simulink",
                     "Python",
-                    "C++",
-                    "MATLAB",
-                    "ROS",
-                    "TensorFlow"
+                    "Arduino IDE",
+                    "LTSpice",
+                    "LaTeX",
+                    "Microsoft Office"
                 ]
             },
             {
-                "name": "Tools & Technologies",
+                "name": "Robotics & Control",
                 "items": [
-                    "OpenBCI",
-                    "Simulink",
-                    "Git",
-                    "Linux",
-                    "Docker"
+                    "Stateflow",
+                    "Robot Kinematics",
+                    "PX4 Autopilot",
+                    "ROS",
+                    "jMAVSim",
+                    "QGroundControl",
+                    "Visual-Inertial Odometry"
+                ]
+            },
+            {
+                "name": "Hardware & Design",
+                "items": [
+                    "Circuit Board Soldering",
+                    "PCB Design (EAGLE)",
+                    "Autodesk Fusion 360",
+                    "3D Printing"
+                ]
+            },
+            {
+                "name": "Machine Learning",
+                "items": [
+                    "Supervised Learning",
+                    "Unsupervised Learning",
+                    "Model Reduction (DMD)",
+                    "Reinforcement Learning",
+                    "Neural Networks"
                 ]
             }
         ]
@@ -40,8 +64,8 @@
         "path": "assets/about-me/media/about-me.jpg"
     },
     "social": {
-        "github": "https://github.com/yourusername",
-        "linkedin": "https://linkedin.com/in/yourusername",
-        "twitter": "https://twitter.com/yourusername"
+        "github": "https://github.com/francesco-russo-MSc",
+        "linkedin": "https://linkedin.com/in/francesco-russo-MSc",
+        "email": "mailto:francesco_russo1@outlook.com"
     }
 } 

@@ -1,21 +1,21 @@
 {
-    "title": "Welcome to my website. Here, you'll find an overview of my projects.",
-    "subtitle": "Electronic Engineer | Control Engineering student | Robotics Enthusiast",
-    "videosubtitle": "Failure is the stepping stone to success.",
+    "title": "Electronic Engineer & Control Engineering Student",
+    "subtitle": "Specializing in Robotics, Neural Interfaces, and Safety-Critical Systems",
+    "videosubtitle": "Bridging Theory and Practice in Control Engineering",
     "background": {
         "type": "gradient",
         "colors": ["#fef2f2", "#fee2e2"]
     },
     "cta": {
         "primary": {
-            "text": "View my projects -->",
+            "text": "View Projects",
             "link": "#projects",
             "show": true
         },
         "secondary": {
-            "text": "Learn More",
+            "text": "About Me",
             "link": "#about",
-            "show": false
+            "show": true
         }
     },
     "media": {

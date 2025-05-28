@@ -1,20 +1,20 @@
 {
-    "title": "Drone with BCI Control",
-    "description": "Real-time neural interface for UAVs, enabling direct brain-to-drone control systems.",
-    "tags": ["BCI", "Drones", "Neural Interface"],
+    "title": "BCI-Controlled Quadrotor with Safety Management",
+    "description": "Master's thesis project focusing on the design and control of a quadrotor system controlled through brain-computer interface signals, implementing safety-critical control and trust-based signal evaluation.",
+    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
     "color": "#dc2626",
     "media": {
         "type": "image",
         "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
     },
     "details": {
-        "challenge": "Developing a reliable brain-computer interface for drone control",
-        "solution": "Implemented real-time neural signal processing and adaptive control algorithms",
-        "technologies": ["Python", "ROS", "TensorFlow", "OpenBCI"],
+        "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
+        "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
+        "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
         "outcomes": [
-            "Achieved 85% accuracy in command recognition",
-            "Reduced latency to under 100ms",
-            "Published research paper in IEEE Robotics"
+            "Developed novel trust-based approach for BCI signal reliability evaluation",
+            "Implemented safety-critical controller ensuring system operation within safe set",
+            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
         ]
     }
 } 
