@@ -216,10 +216,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
+            const section = entry.target;
+            const sectionId = '#' + section.id;
+            
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                const sectionId = '#' + entry.target.id;
+                section.classList.add('visible');
                 updateActiveNavLink(sectionId);
+            } else if (section.id !== 'home') {
+                section.classList.remove('visible');
             }
         });
     }, observerOptions);
