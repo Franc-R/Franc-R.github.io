@@ -1,21 +1,21 @@
 {
     "title": "Electronic Engineer & Control Engineering Student",
     "subtitle": "Specializing in Robotics, Neural Interfaces, and Safety-Critical Systems",
-    "videosubtitle": "Bridging Theory and Practice in Control Engineering",
+    "videosubtitle": "Failure is the stepping stone to success.",
     "background": {
         "type": "gradient",
         "colors": ["#fef2f2", "#fee2e2"]
     },
     "cta": {
         "primary": {
-            "text": "View Projects",
+            "text": "View my projects →",
             "link": "#projects",
             "show": true
         },
         "secondary": {
             "text": "About Me",
             "link": "#about",
-            "show": true
+            "show": false
         }
     },
     "media": {
