@@ -1,20 +1,20 @@
 {
-    "title": "MIMO Analisys",
-    "description": "The goal of the project was to analyse the directional properties of MIMO systems, and assess how ill-conditioned the system is, by means Singular Value Decomposition. It also aimed to design an 𝐻-infinity controller capable of robustly stabilising the MIMO system, taking into account both structured and unstructured uncertainties.",
-    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
+    "title": "MIMO Analysis",
+    "description": "This project focused on analyzing the directional properties and conditioning of Multiple-Input Multiple-Output (MIMO) systems using Singular Value Decomposition (SVD). Additionally, an H-infinity controller was designed to robustly stabilize the system while accounting for structured and unstructured uncertainties.",
+    "tags": [],
     "color": "#991b1b",
     "media": {
         "type": "image",
-        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
+        "path": "assets/projects/MIMO_Analisys/media/MIMO.jpg"
     },
     "details": {
-        "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
-        "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
-        "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
+        "challenge": "Assessing the conditioning of MIMO systems and designing a robust controller capable of maintaining stability despite uncertainties.",
+        "solution": "Used Singular Value Decomposition to analyze system properties and designed an H-infinity controller to ensure robust stabilization under model uncertainties.",
+        "technologies": ["MATLAB", "Singular Value Decomposition", "H-infinity Control Theory", "Robust Control"],
         "outcomes": [
-            "Developed novel trust-based approach for BCI signal reliability evaluation",
-            "Implemented safety-critical controller ensuring system operation within safe set",
-            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
+            "Characterized the directional properties and conditioning of MIMO systems.",
+            "Developed a robust H-infinity controller that guarantees system stability despite uncertainties.",
+            "Validated control performance through simulations demonstrating effective disturbance rejection."
         ]
     }
-} 
+}
