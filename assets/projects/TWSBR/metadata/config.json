@@ -1,20 +1,29 @@
 {
     "title": "Two Wheels Self-Balancing Robot",
-    "description": "The aim of the project was to build a wheeled robot, designed with Autodesk Inventor and manufactured using a 3D printer, capable of autonomously maintaining balance. This was achieved by designing a controller implemented on an Arduino Nano, able to asymptotically stabilize the system’s equilibrium point.",
-    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
+    "description": "The aim of the project was to build a wheeled robot, designed with Autodesk Inventor and manufactured using a 3D printer, capable of autonomously maintaining balance. This was achieved by designing a PID controller implemented on an Arduino Nano, able to asymptotically stabilize the system’s equilibrium point.",
+    "tags": [],
     "color": "#991b1b",
     "media": {
         "type": "image",
-        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
+        "path": "assets/projects/TWSBR/media/TWBR.jpg"
     },
     "details": {
-        "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
-        "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
-        "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
+        "challenge": "Accurately measuring the robot’s tilt angle was challenging due to sensor noise. A simple low-pass filter was insufficient, so we implemented a Kalman filter to effectively reduce noise and obtain reliable angle measurements.",
+        "solution": "Designed and implemented a PID controller on Arduino Nano, using data from an MPU6050 IMU sensor. The controller stabilized the robot by continuously adjusting motor outputs based on filtered angle feedback.",
+        "technologies": [
+            "Autodesk Inventor",
+            "3D Printing",
+            "Arduino Nano",
+            "MPU6050 IMU",
+            "Kalman Filter",
+            "PID Control",
+            "MATLAB Simulations",
+            "Lagrangian Mechanics"
+        ],
         "outcomes": [
-            "Developed novel trust-based approach for BCI signal reliability evaluation",
-            "Implemented safety-critical controller ensuring system operation within safe set",
-            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
+            "The robot successfully maintained balance autonomously.",
+            "Mathematical modeling was performed using Lagrangian mechanics to describe the system dynamics.",
+            "Future developments include enabling path following with adaptive cruise control."
         ]
     }
-} 
+}
