@@ -1,20 +1,20 @@
 {
-    "title": "Dynamic Mode Decomposition, recognition of Spatial-Temporal patterns in large-scale Neural Recordings for imagination and movement tasks:",
-    "description": "Neural recordings are essential for investigating the nervous system. Although they typically generate data that reside in a high-dimensional space, their underlying structure often lies in a low-dimensional one. Thus, the Dynamic Mode Decomposition technique is used to construct a reduced-order representation of these data, enabling the extraction of meaningful spatio-temporal patterns from large-scale neural recordings.",
-    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
+    "title": "Dynamic Mode Decomposition: Recognition of Spatio-Temporal Patterns in Large-Scale Neural Recordings for Imagination and Movement Tasks",
+    "description": "Neural recordings are essential for investigating the nervous system. Although they typically generate data in a high-dimensional space, their underlying structure often lies in a low-dimensional one. Dynamic Mode Decomposition (DMD) is used to construct reduced-order representations of these data, enabling extraction of meaningful spatio-temporal patterns from large-scale neural recordings.",
+    "tags": [],
     "color": "#991b1b",
     "media": {
         "type": "image",
-        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
+        "path": "assets/projects/Dynamic_Mode_Decomposition_for_EEG/media/dmd.png"
     },
     "details": {
-        "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
-        "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
-        "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
+        "challenge": "Extracting interpretable spatio-temporal features from complex, high-dimensional neural recordings with minimal loss of information.",
+        "solution": "Applied Dynamic Mode Decomposition to neural datasets to obtain low-dimensional modes representing key spatial and temporal dynamics relevant for imagination and movement tasks.",
+        "technologies": ["Python", "NumPy", "SciPy", "Dynamic Mode Decomposition", "Neural Signal Processing"],
         "outcomes": [
-            "Developed novel trust-based approach for BCI signal reliability evaluation",
-            "Implemented safety-critical controller ensuring system operation within safe set",
-            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
+            "Identified dominant spatio-temporal modes capturing essential neural activity patterns.",
+            "Reduced data dimensionality facilitating visualization and further analysis.",
+            "Provided insights for brain-computer interface applications by characterizing neural dynamics during motor imagery."
         ]
     }
-} 
+}
