@@ -1,20 +1,22 @@
 {
-    "title": " Motion Control of Robots: An Approach Based on Light Source Tracking",
-    "description": "Bachelor’s degree thesis focused on the design and development of a 4-DOF bipedal robot, including the design and implementation of a control system, deployed on Arduino, to track a light source through bipedal locomotion.",
-    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
+    "title": "Motion Control of Robots: An Approach Based on Light Source Tracking",
+    "description": "Bachelor’s thesis involving the design and construction of a 4-DOF bipedal robot capable of locomotion. The project included the full development of a light-tracking control system implemented on Arduino, from sensing to actuation.",
+    "tags": ["Robotics", "Embedded Systems", "Control Systems", "Light Tracking"],
     "color": "#991b1b",
     "media": {
         "type": "image",
-        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
+        "path": "assets/projects/light-tracking-robot/media/robot-preview.jpg"
     },
     "details": {
-        "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
-        "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
-        "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
+        "challenge": "The main challenge was designing a minimalistic yet effective strategy to let the robot follow a light source. Given limited sensing (only two photoresistors) and mechanical constraints, the task required translating light variations into directional commands—forward, left, or right—using simple hardware and control logic.",
+        "solution": "A pair of photoresistors was mounted on the robot to measure light intensity. The control logic computed the difference between the two sensor readings to estimate the direction of the light source. This difference served as feedback for a simple reactive control scheme that decided whether the robot should move forward, turn left, or turn right.",
+        "technologies": ["Arduino Uno", "Photoresistors", "Servo Motors", "C++ (Arduino IDE)"],
         "outcomes": [
-            "Developed novel trust-based approach for BCI signal reliability evaluation",
-            "Implemented safety-critical controller ensuring system operation within safe set",
-            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
+            "Successfully built a working bipedal robot capable of tracking a light source.",
+            "Implemented an embedded control strategy based on simple feedback.",
+            "Recorded a demonstration video of the robot's motion.",
+            "Identified potential improvements, such as adding obstacle avoidance."
         ]
     }
-} 
+}
+
