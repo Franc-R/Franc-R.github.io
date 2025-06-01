@@ -1,6 +1,6 @@
 {
-    "title": "BCI-Controlled Quadrotor with Safety Management",
-    "description": "Master's thesis project focusing on the design and control of a quadrotor system controlled through brain-computer interface signals, implementing safety-critical control and trust-based signal evaluation.",
+    "title": " Motion Control of Robots: An Approach Based on Light Source Tracking",
+    "description": "Bachelor’s degree thesis focused on the design and development of a 4-DOF bipedal robot, including the design and implementation of a control system, deployed on Arduino, to track a light source through bipedal locomotion.",
     "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
     "color": "#991b1b",
     "media": {
