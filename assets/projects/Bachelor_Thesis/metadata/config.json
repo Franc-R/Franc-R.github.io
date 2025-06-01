@@ -1,7 +1,7 @@
 {
     "title": "Motion Control of Robots: An Approach Based on Light Source Tracking",
     "description": "Bachelor’s thesis involving the design and construction of a 4-DOF bipedal robot capable of locomotion. The project included the full development of a light-tracking control system implemented on Arduino, from sensing to actuation.",
-    "tags": ["Robotics", "Embedded Systems", "Control Systems", "Light Tracking"],
+    "tags": [],
     "color": "#991b1b",
     "media": {
         "type": "image",
