@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function loadProjects() {
-        const projectFolders = ['drone-bci', 'trust-control'];
+        const projectFolders = ['drone-bci', 'Bachelor_Thesis', 'DC-Motor Velocity Control Problem', 'Dynamic_Mode_Decomposition_for_EEG', 'MIMO_Analisys', 'TWSBR'];
         
         for (const folder of projectFolders) {
             const projectData = await loadProjectData(`assets/projects/${folder}`);
