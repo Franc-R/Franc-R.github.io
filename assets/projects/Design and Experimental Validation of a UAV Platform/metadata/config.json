@@ -1,20 +1,19 @@
 {
-    "title": "BCI-Controlled Quadrotor with Safety Management",
-    "description": "Master's thesis project focusing on the design and control of a quadrotor system controlled through brain-computer interface signals, implementing safety-critical control and trust-based signal evaluation.",
-    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
-    "color": "#991b1b",
-    "media": {
-        "type": "image",
-        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
-    },
-    "details": {
-        "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
-        "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
-        "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
-        "outcomes": [
-            "Developed novel trust-based approach for BCI signal reliability evaluation",
-            "Implemented safety-critical controller ensuring system operation within safe set",
-            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
-        ]
-    }
-} 
+  "title": "Design and Experimental Validation of a UAV Platform",
+  "description": "In this project, a 7-inch Crocodile frame drone was customized by designing and producing in 3D components such as landing gear and mounts for the RealSense T265 camera, Jetson Nano, PX4 6C flight controller, and ESCs. A Visual-Inertial Odometry (VIO) localization solution was integrated, enabling the drone to estimate its position indoors where GPS signals and external motion capture systems are unavailable. The work encompassed both hardware and software aspects, ensuring stable and accurate flight performance even without external references.",
+  "color": "#991b1b",
+  "media": {
+    "type": "image",
+    "path": "assets/projects/drone-hw/media/uav-prototype-preview.jpg"
+  },
+  "details": {
+    "challenge": "Enabling reliable indoor flight of a customized UAV without access to GPS or external motion capture systems.",
+    "solution": "Designed and integrated custom 3D-printed components to mount onboard devices (Jetson Nano, PX4 flight controller, ESC, RealSense T265) and implemented VIO-based localization for autonomous indoor navigation.",
+    "technologies": ["Fusion 360", "3D Printing", "Visual-Inertial Odometry", "PX4 Autopilot", "Jetson Nano"],
+    "outcomes": [
+      "Customized a 7-inch UAV frame with fully integrated hardware components",
+      "Designed and printed custom mounts for flight controller, ESC, camera, and onboard computer",
+      "Successfully enabled indoor positioning using VIO in GPS-denied environments"
+    ]
+  }
+}
