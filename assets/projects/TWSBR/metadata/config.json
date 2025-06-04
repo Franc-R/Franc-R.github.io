@@ -20,10 +20,6 @@
             "MATLAB Simulations",
             "Lagrangian Mechanics"
         ],
-        "outcomes": [
-            "The robot successfully maintained balance autonomously.",
-            "Mathematical modeling was performed using Lagrangian mechanics to describe the system dynamics.",
-            "Future developments include enabling path following with adaptive cruise control."
-        ]
+        "outcomes": []
     }
 }
