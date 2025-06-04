@@ -11,10 +11,6 @@
         "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
         "solution": "Implemented safety-critical controller with trust-based signal evaluation and VIO for robust indoor localization",
         "technologies": ["Control Barrier Functions", "Fusion 360", "Visual-Inertial Odometry", "BCI Signal Processing"],
-        "outcomes": [
-            "Developed novel trust-based approach for BCI signal reliability evaluation",
-            "Implemented safety-critical controller ensuring system operation within safe set",
-            "Integrated custom 3D-printed components and VIO for robust indoor navigation"
-        ]
+        "outcomes": []
     }
 } 
