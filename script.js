@@ -155,9 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <h3>${projectData.title}</h3>
             <p>${projectData.description}</p>
-            <div class="project-tags">
-                ${projectData.tags.map(tag => `<span>${tag}</span>`).join('')}
-            </div>
+            
             <div class="project-details">
                 <h4>Challenge</h4>
                 <p>${projectData.details.challenge}</p>
@@ -167,10 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="tech-tags">
                     ${projectData.details.technologies.map(tech => `<span>${tech}</span>`).join('')}
                 </div>
-                <h4>Outcomes</h4>
-                <ul>
-                    ${projectData.details.outcomes.map(outcome => `<li>${outcome}</li>`).join('')}
-                </ul>
+                
             </div>
         `;
 
