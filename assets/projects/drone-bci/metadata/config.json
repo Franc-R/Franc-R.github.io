@@ -1,7 +1,7 @@
 {
     "title": " Safety Management and Trust beetween Humans and Robots in BCI system",
     "description": " Master’s degree thesis focuses on the design and control of an underactuated quadrotor controlled through brain–computer interface signals, where a safety critical controller was implemented to ensure that the system operates within a predefined safe set. A novel trust-based approach was proposed to dynamically evaluate the reliability of the BCI signal before execution. Additionally, the physical platform was customized using 3D-printed components designed in Fusion 360, and Visual-Inertial Odometry (VIO) was integrated to enable robust indoor localization.",
-    "tags": ["BCI", "UAV Control", "Safety-Critical Systems", "Human-Robot Interaction"],
+    "tags": [],
     "color": "#991b1b",
     "media": {
         "type": "image",
