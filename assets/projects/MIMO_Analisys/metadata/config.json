@@ -11,10 +11,6 @@
         "challenge": "Assessing the conditioning of MIMO systems and designing a robust controller capable of maintaining stability despite uncertainties.",
         "solution": "Used Singular Value Decomposition to analyze system properties and designed an H-infinity controller to ensure robust stabilization under model uncertainties.",
         "technologies": ["MATLAB", "Singular Value Decomposition", "H-infinity Control Theory", "Robust Control"],
-        "outcomes": [
-            "Characterized the directional properties and conditioning of MIMO systems.",
-            "Developed a robust H-infinity controller that guarantees system stability despite uncertainties.",
-            "Validated control performance through simulations demonstrating effective disturbance rejection."
-        ]
+        "outcomes": []
     }
 }
