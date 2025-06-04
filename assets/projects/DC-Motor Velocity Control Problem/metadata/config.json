@@ -11,10 +11,6 @@
         "challenge": "Designing a robust controller capable of minimizing the H-infinity norm to achieve disturbance rejection, noise attenuation, and precise velocity tracking for a DC motor system.",
         "solution": "Implemented an H-infinity control strategy in MATLAB and Simulink to synthesize a controller that balances robustness and performance under noisy conditions and external disturbances.",
         "technologies": ["MATLAB", "Simulink", "H-infinity Control Theory"],
-        "outcomes": [
-            "Developed and validated an H-infinity velocity controller through comprehensive simulations.",
-            "Generated detailed simulation results compiled in a PDF report.",
-            "Demonstrated effective disturbance rejection and noise attenuation in the simulated system."
-        ]
+        "outcomes": []
     }
 }
