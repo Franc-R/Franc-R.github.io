@@ -5,7 +5,7 @@
     "color": "#991b1b",
     "media": {
         "type": "image",
-        "path": "assets/projects/drone-bci/media/drone-bci-preview.jpg"
+        "path": "assets/projects/drone-bci/media/tesi.png"
     },
     "details": {
         "challenge": "Ensuring safe operation of a BCI-controlled quadrotor while maintaining responsive control",
