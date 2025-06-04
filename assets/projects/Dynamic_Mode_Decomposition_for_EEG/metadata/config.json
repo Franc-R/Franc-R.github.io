@@ -11,10 +11,6 @@
         "challenge": "Extracting interpretable spatio-temporal features from complex, high-dimensional neural recordings with minimal loss of information.",
         "solution": "Applied Dynamic Mode Decomposition to neural datasets to obtain low-dimensional modes representing key spatial and temporal dynamics relevant for imagination and movement tasks.",
         "technologies": ["MATLAB", "Dynamic Mode Decomposition", "Neural Signal Processing"],
-        "outcomes": [
-            "Identified dominant spatio-temporal modes capturing essential neural activity patterns.",
-            "Reduced data dimensionality facilitating visualization and further analysis.",
-            "Provided insights for brain-computer interface applications by characterizing neural dynamics during motor imagery."
-        ]
+        "outcomes": []
     }
 }
