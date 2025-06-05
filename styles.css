@@ -575,26 +575,23 @@ footer {
 } 
 
 .modal {
-  display: none;
+  display: none;               
   position: fixed;
-  z-index: 1000;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);  
+  z-index: 1000;
 }
 
 .modal-content {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #modal-video {
@@ -604,12 +601,12 @@ footer {
 }
 
 .close-button {
-  color: white;
   position: absolute;
   top: 20px;
   right: 30px;
   font-size: 40px;
   font-weight: bold;
+  color: white;
   cursor: pointer;
   z-index: 1001;
 }
@@ -617,4 +614,3 @@ footer {
 .close-button:hover {
   color: #ccc;
 }
-
