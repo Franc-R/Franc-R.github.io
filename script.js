@@ -293,17 +293,3 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 }); 
-
-document.getElementById('close-video').addEventListener('click', () => {
-    const modal = document.getElementById('video-modal');
-    const iframe = document.getElementById('video-iframe');
-    iframe.src = '';  // Stoppa il video
-    modal.style.display = 'none';
-});
-
-// opzionale: chiudi se clicchi fuori dal video
-document.getElementById('video-modal').addEventListener('click', (e) => {
-    if(e.target.id === 'video-modal') {
-        document.getElementById('close-video').click();
-    }
-});
