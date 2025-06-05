@@ -168,6 +168,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             </div>
         `;
+
+        if (projectData.videoUrl) {
+        const videoBtn = document.createElement('button');
+        videoBtn.textContent = "Watch Video";
+        videoBtn.style.marginTop = '10px';
+        videoBtn.onclick = () => openVideoModal(projectData.videoUrl);
+        card.querySelector('.project-details').appendChild(videoBtn);
+        }
         
         return card;
     }
@@ -284,3 +292,29 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.head.appendChild(style);
 }); 
+
+// Open modal with YouTube link
+function openVideoModal(videoUrl) {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("modal-video");
+  iframe.src = videoUrl + "?autoplay=1";
+  modal.style.display = "block";
+}
+
+// Close modal
+document.querySelector(".close-button").addEventListener("click", () => {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("modal-video");
+  modal.style.display = "none";
+  iframe.src = "";
+});
+
+// Optional: Close modal when clicking outside
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("videoModal");
+  const iframe = document.getElementById("modal-video");
+  if (e.target === modal) {
+    modal.style.display = "none";
+    iframe.src = "";
+  }
+});
