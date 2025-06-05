@@ -165,18 +165,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="tech-tags">
                     ${projectData.details.technologies.map(tech => `<span>${tech}</span>`).join('')}
                 </div>
-            ${projectData.videoId ? `<h4>Extra Material</h4>
-            <button class="open-video-btn" data-video-id="${projectData.videoId}">Guarda Video</button>` : ''}
+            
             </div>
         `;
-
-        if(projectData.videoId) {
-        card.querySelector('.open-video-btn').addEventListener('click', () => {
-            const modal = document.getElementById('video-modal');
-            const iframe = document.getElementById('video-iframe');
-            iframe.src = `https://www.youtube.com/embed/${projectData.videoId}?autoplay=1`;
-            modal.style.display = 'flex';
-        });
         
         return card;
     }
