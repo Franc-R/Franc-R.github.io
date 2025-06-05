@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const extra = projectData.details.extraMaterial
         ? `<h4>Extra Material</h4>
-           <p><a href="${projectData.details.extraMaterial}" target="_blank">Watch Video</a></p>`
+           <p><a href="${projectData.details.extraMaterial}">Watch Video</a></p>`
         : '';
 
         card.innerHTML = `
