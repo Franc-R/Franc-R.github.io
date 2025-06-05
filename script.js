@@ -173,8 +173,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const videoBtn = document.createElement('button');
         videoBtn.textContent = "Watch Video";
         videoBtn.style.marginTop = '10px';
+
+        const btnWrapper = document.createElement('div');
+        btnWrapper.style.display = 'flex';
+        btnWrapper.style.justifyContent = 'center';
+        btnWrapper.style.marginTop = '10px';
+
         videoBtn.onclick = () => openVideoModal(projectData.details.videoUrl);
-        card.querySelector('.project-details').appendChild(videoBtn);
+
+        btnWrapper.appendChild(videoBtn);
+        card.querySelector('.project-details').appendChild(btnWrapper);
         }
         
         return card;
