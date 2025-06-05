@@ -335,12 +335,18 @@ function openVideoModal(videoUrl) {
     const iframe = document.getElementById("modal-video");
     iframe.src = videoUrl + "?autoplay=1";
     modal.style.display = "block";
+    modal.offsetHeight;
+    modal.classList.add("active");
 }
 
 function closeVideoModal() {
     const modal = document.getElementById("videoModal");
     const iframe = document.getElementById("modal-video");
-    modal.style.display = "none";
-    iframe.src = "";
+    
+    modal.classList.remove("active");
+    setTimeout(() => {
+        modal.style.display = "none";
+        iframe.src = "";
+    }, 300);
 }
 
