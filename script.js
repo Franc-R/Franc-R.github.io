@@ -318,3 +318,14 @@ window.addEventListener("click", (e) => {
     iframe.src = "";
   }
 });
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("modal-video");
+    if (modal.style.display === "block") {
+      modal.style.display = "none";
+      iframe.src = "";
+    }
+  }
+});
