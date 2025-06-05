@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const videoBtn = document.createElement('button');
         videoBtn.textContent = "▶ Watch Video";
         videoBtn.style.padding = '10px 20px';
-        videoBtn.style.backgroundColor = '#007BFF';
+        videoBtn.style.backgroundColor = '#770000';
         videoBtn.style.color = 'white';
         videoBtn.style.border = 'none';
         videoBtn.style.borderRadius = '5px';
@@ -184,18 +184,18 @@ document.addEventListener('DOMContentLoaded', () => {
         videoBtn.style.transition = 'background-color 0.3s ease, box-shadow 0.3s ease';
 
         videoBtn.onmouseover = () => {
-        videoBtn.style.backgroundColor = '#0056b3';
+        videoBtn.style.backgroundColor = '#440000';
         videoBtn.style.boxShadow = '0 6px 10px rgba(0, 86, 179, 0.6)';
         };
         videoBtn.onmouseout = () => {
-        videoBtn.style.backgroundColor = '#007BFF';
+        videoBtn.style.backgroundColor = '#770000';
         videoBtn.style.boxShadow = '0 4px 6px rgba(0, 123, 255, 0.4)';
         };
 
         const btnWrapper = document.createElement('div');
         btnWrapper.style.display = 'flex';
         btnWrapper.style.justifyContent = 'center';
-        btnWrapper.style.marginTop = '10px';
+        btnWrapper.style.marginTop = '30px';
 
         videoBtn.onclick = () => openVideoModal(projectData.details.videoUrl);
 
