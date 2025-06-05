@@ -172,12 +172,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (projectData.details.videoUrl) {
         const videoBtn = document.createElement('button');
         videoBtn.textContent = "Watch Video";
-        videoBtn.style.marginTop = '10px';
+        videoBtn.style.marginTop = '20px';
 
         const btnWrapper = document.createElement('div');
         btnWrapper.style.display = 'flex';
         btnWrapper.style.justifyContent = 'center';
-        btnWrapper.style.marginTop = '10px';
+        btnWrapper.style.marginTop = '20px';
 
         videoBtn.onclick = () => openVideoModal(projectData.details.videoUrl);
 
