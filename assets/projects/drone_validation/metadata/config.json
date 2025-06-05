@@ -10,6 +10,6 @@
     "challenge": "Enabling reliable indoor flight of a customized UAV without access to GPS or external motion capture systems.",
     "solution": "Designed and integrated custom 3D-printed components to mount onboard devices (Jetson Nano, PX4 flight controller, ESC, RealSense T265) and implemented VIO-based localization for autonomous indoor navigation.",
     "technologies": ["Fusion 360", "3D Printing", "Visual-Inertial Odometry", "PX4 Autopilot", "Jetson Nano"],
-    "videoId": "https://www.youtube.com/watch?v=0Gc5-zlP2vg"
+    "videoUrl": "https://www.youtube.com/watch?v=0Gc5-zlP2vg"
   }
 }
