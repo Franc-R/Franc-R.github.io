@@ -301,31 +301,34 @@ function openVideoModal(videoUrl) {
   modal.style.display = "block";
 }
 
-// Close modal
-document.querySelector(".close-button").addEventListener("click", () => {
+// Close modal function riutilizzabile
+function closeVideoModal() {
   const modal = document.getElementById("videoModal");
   const iframe = document.getElementById("modal-video");
-  modal.style.display = "none";
-  iframe.src = "";
-});
-
-// Optional: Close modal when clicking outside
-window.addEventListener("click", (e) => {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("modal-video");
-  if (e.target === modal) {
+  if (modal && iframe) {
     modal.style.display = "none";
     iframe.src = "";
   }
+}
+
+// Close modal on close button click
+document.querySelector(".close-button").addEventListener("click", closeVideoModal);
+
+// Close modal when clicking outside the modal content
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("videoModal");
+  if (modal && e.target === modal) {
+    closeVideoModal();
+  }
 });
 
+// Close modal on pressing ESC key
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     const modal = document.getElementById("videoModal");
-    const iframe = document.getElementById("modal-video");
-    if (modal.style.display === "block") {
-      modal.style.display = "none";
-      iframe.src = "";
+    if (modal && modal.style.display === "block") {
+      closeVideoModal();
     }
   }
 });
+
