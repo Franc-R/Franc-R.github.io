@@ -599,8 +599,8 @@ footer {
 
 .modal-content {
     position: relative;
-    width: 80%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 80%;
     aspect-ratio: 16/9;
     background: #000;
     transform: scale(0.95);
