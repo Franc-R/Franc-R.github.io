@@ -185,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         videoBtn.onmouseover = () => {
         videoBtn.style.backgroundColor = '#440000';
-        videoBtn.style.boxShadow = '0 6px 10px rgba(0, 86, 179, 0.6)';
+        videoBtn.style.boxShadow = '0 6px 10px rgba(68, 0, 0, 0.8)';
         };
         videoBtn.onmouseout = () => {
         videoBtn.style.backgroundColor = '#770000';
-        videoBtn.style.boxShadow = '0 4px 6px rgba(0, 123, 255, 0.4)';
+        videoBtn.style.boxShadow = '0 4px 6px rgba(119, 0, 0, 0.6)';
         };
 
         const btnWrapper = document.createElement('div');
