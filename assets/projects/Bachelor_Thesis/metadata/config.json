@@ -11,7 +11,7 @@
         "challenge": "The main challenge was designing a minimalistic yet effective strategy to let the robot follow a light source. Given limited sensing (only two photoresistors) and mechanical constraints, the task required translating light variations into directional commands—forward, left, or right—using simple hardware and control logic.",
         "solution": "A pair of photoresistors was mounted on the robot to measure light intensity. The control logic computed the difference between the two sensor readings to estimate the direction of the light source. This difference served as feedback for a simple reactive control scheme that decided whether the robot should move forward, turn left, or turn right.",
         "technologies": ["Arduino Uno", "Photoresistors", "Servo Motors", "C++ (Arduino IDE)"],
-        "videoId": "https://www.youtube.com/watch?v=TTU4pEJBVP4"
+        "videoUrl": "https://www.youtube.com/embed/TTU4pEJBVP4"
     }
 }
 
