@@ -148,12 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'project-card';
         card.style.borderColor = projectData.color;
-
-        const extra = projectData.details.extraMaterial
-        ? `<h4>Extra Material</h4>
-           <p><a href="${projectData.details.extraMaterial}">Watch Video</a></p>`
-        : '';
-
+        
         card.innerHTML = `
             <div class="project-media">
                 <img src="${projectData.media.path}" alt="${projectData.title}">
@@ -170,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="tech-tags">
                     ${projectData.details.technologies.map(tech => `<span>${tech}</span>`).join('')}
                 </div>
-                ${extra}
+            
             </div>
         `;
 
