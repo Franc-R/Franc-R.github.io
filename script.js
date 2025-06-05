@@ -169,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        if (projectData.videoUrl) {
+        if (projectData.details.videoUrl) {
         const videoBtn = document.createElement('button');
         videoBtn.textContent = "Watch Video";
         videoBtn.style.marginTop = '10px';
-        videoBtn.onclick = () => openVideoModal(projectData.videoUrl);
+        videoBtn.onclick = () => openVideoModal(projectData.details.videoUrl);
         card.querySelector('.project-details').appendChild(videoBtn);
         }
         
