@@ -317,32 +317,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+
+    document.querySelector(".close-button").addEventListener("click", closeVideoModal);
+
+    window.addEventListener("click", (e) => {
+        const modal = document.getElementById("videoModal");
+        if (e.target === modal) closeVideoModal();
+    });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeVideoModal();
+    });
 }); 
 
 function openVideoModal(videoUrl) {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("modal-video");
-  iframe.src = videoUrl + "?autoplay=1";
-  modal.style.display = "block";
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("modal-video");
+    iframe.src = videoUrl + "?autoplay=1";
+    modal.style.display = "block";
 }
 
 function closeVideoModal() {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("modal-video");
-  modal.style.display = "none";
-  iframe.src = "";
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("modal-video");
+    modal.style.display = "none";
+    iframe.src = "";
 }
-
-document.querySelector(".close-button").addEventListener("click", closeVideoModal);
-
-// Close on click outside
-window.addEventListener("click", (e) => {
-  const modal = document.getElementById("videoModal");
-  if (e.target === modal) closeVideoModal();
-});
-
-// Close on ESC key
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeVideoModal();
-});
 
