@@ -293,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(style);
 }); 
 
-// Open modal with YouTube link
 function openVideoModal(videoUrl) {
   const modal = document.getElementById("videoModal");
   const iframe = document.getElementById("modal-video");
@@ -301,25 +300,23 @@ function openVideoModal(videoUrl) {
   modal.style.display = "block";
 }
 
-// Close modal function riutilizzabile
 function closeVideoModal() {
   const modal = document.getElementById("videoModal");
   const iframe = document.getElementById("modal-video");
-  if (modal && iframe) {
-    modal.style.display = "none";
-    iframe.src = "";
-  }
+  modal.style.display = "none";
+  iframe.src = "";
 }
 
-// Close modal on close button click
 document.querySelector(".close-button").addEventListener("click", closeVideoModal);
 
-// Close modal on pressing ESC key
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    const modal = document.getElementById("videoModal");
-    if (modal && modal.style.display === "block") {
-      closeVideoModal();
-    }
-  }
+// Close on click outside
+window.addEventListener("click", (e) => {
+  const modal = document.getElementById("videoModal");
+  if (e.target === modal) closeVideoModal();
 });
+
+// Close on ESC key
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeVideoModal();
+});
+
