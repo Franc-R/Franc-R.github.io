@@ -314,14 +314,6 @@ function closeVideoModal() {
 // Close modal on close button click
 document.querySelector(".close-button").addEventListener("click", closeVideoModal);
 
-// Close modal when clicking outside the modal content
-window.addEventListener("click", (e) => {
-  const modal = document.getElementById("videoModal");
-  if (modal && e.target === modal) {
-    closeVideoModal();
-  }
-});
-
 // Close modal on pressing ESC key
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
@@ -331,4 +323,3 @@ window.addEventListener("keydown", (e) => {
     }
   }
 });
-
