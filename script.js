@@ -179,17 +179,20 @@ document.addEventListener('DOMContentLoaded', () => {
         videoBtn.style.borderRadius = '5px';
         videoBtn.style.boxShadow = '0 4px 6px rgba(119, 0, 0, 0.6)';
         videoBtn.style.cursor = 'pointer';
-        videoBtn.style.fontWeight = 'bold';
-        videoBtn.style.fontSize = '16px';
-        videoBtn.style.transition = 'background-color 0.3s ease, box-shadow 0.3s ease';
+        videoBtn.style.fontWeight = '500';
+        videoBtn.style.fontSize = '1rem';
+        videoBtn.style.fontFamily = '"Montserrat", sans-serif';
+        videoBtn.style.transition = 'all 0.3s ease';
 
         videoBtn.onmouseover = () => {
-        videoBtn.style.backgroundColor = '#440000';
-        videoBtn.style.boxShadow = '0 6px 10px rgba(68, 0, 0, 0.8)';
+            videoBtn.style.backgroundColor = '#440000';
+            videoBtn.style.boxShadow = '0 6px 10px rgba(68, 0, 0, 0.8)';
+            videoBtn.style.transform = 'translateY(-2px)';
         };
         videoBtn.onmouseout = () => {
-        videoBtn.style.backgroundColor = '#770000';
-        videoBtn.style.boxShadow = '0 4px 6px rgba(119, 0, 0, 0.6)';
+            videoBtn.style.backgroundColor = '#770000';
+            videoBtn.style.boxShadow = '0 4px 6px rgba(119, 0, 0, 0.6)';
+            videoBtn.style.transform = 'translateY(0)';
         };
 
         const btnWrapper = document.createElement('div');
