@@ -222,7 +222,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showSection(sectionId) {
-        document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+        const section = document.querySelector(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            section.classList.add('visible');
+            updateActiveNavLink(sectionId);
+        }
     }
 
     function updateActiveNavLink(sectionId) {
@@ -239,23 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const sectionId = link.getAttribute('href');
             showSection(sectionId);
-            updateActiveNavLink(sectionId);
+            navLinksContainer.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
         });
     });
-
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            showSection(targetId);
         });
     });
 
@@ -274,10 +272,9 @@ document.addEventListener('DOMContentLoaded', () => {
     loadAboutContent();
     loadProjects();
 
-
     const observerOptions = {
         threshold: [0.1, 0.2, 0.3, 0.4, 0.5],
-        rootMargin: isMobile ? '-200px 0px' : '-50px 0px'
+        rootMargin: isMobile ? '-100px 0px' : '-50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -290,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (entry.intersectionRatio > 0.5) {
                     updateActiveNavLink(sectionId);
                 }
-            } else if (section.id !== 'home') {
+            } else {
                 if (entry.intersectionRatio < 0.1) {
                     section.classList.remove('visible');
                 }
