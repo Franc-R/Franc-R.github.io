@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observerOptions = {
         threshold: [0.1, 0.2, 0.3, 0.4, 0.5],
-        rootMargin: isMobile ? '-100px 0px' : '-50px 0px'
+        rootMargin: isMobile ? '-50px 0px' : '-50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (entry.isIntersecting) {
                 section.classList.add('visible');
-                if (entry.intersectionRatio > 0.5) {
+                if (entry.intersectionRatio > 0.3) {
                     updateActiveNavLink(sectionId);
                 }
             } else {
@@ -327,6 +327,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeVideoModal();
+    });
+
+    window.addEventListener('scroll', () => {
+        const projectsSection = document.querySelector('#projects');
+        const rect = projectsSection.getBoundingClientRect();
+        const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0;
+        
+        if (isVisible) {
+            projectsSection.classList.add('visible');
+        }
     });
 }); 
 
